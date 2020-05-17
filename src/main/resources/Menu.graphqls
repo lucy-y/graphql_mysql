@@ -1,0 +1,23 @@
+type Menu {
+    menuId: Int!
+    menuURI: String
+    menuName: String
+    menuNameKo: String
+    menuNameEn: String
+    menuNameJa: String
+    menuNameZh: String
+    menuDesc: String
+    menuGroupId: Int
+    menuHide: Int
+    menuOrder: Int
+    adminId: String
+}
+
+type Query {
+    findAllMenus : [Menu]!
+    countMenus : Long!
+}
+
+type Mutation {
+    createMenu(menuURI: String!, menuName: String!, menuNameKo: String, menuNameEn: String, menuNameJa: String, menuNameZh: String, menuDesc: String, menuGroupId: Int, menuHide: Int, menuOrder: Int, adminId: String): Menu!
+}
